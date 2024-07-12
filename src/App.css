@@ -9,11 +9,24 @@ body{
 .navbar{
   background-color: rgb(180, 91, 180);
   display: flex;
-  height: 80px;
+  height: 100px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding: 10px;
   padding-right: 20px;
   margin-bottom: 50px;
+  
+}
+
+.header{
+  color: white;
+  padding-left: 10px;
+}
+
+.links{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .link{
@@ -25,6 +38,7 @@ body{
   color: white;
   display: flex;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .profile img{
@@ -37,6 +51,7 @@ body{
   color: white;
   height: 30px;
   margin-top: 10px;
+  padding: 0 5px;
 }
 
 .formdata{
@@ -109,14 +124,24 @@ body{
 
 @media(max-width:480px){
   .navbar{
-    margin:0;
+    padding:10px 5px;
     padding-right:10px;
-    justify-content: space-evenly;
-    gap:10px
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .header h1{
+    font-size: 18px;
   }
 
   .link{
     margin: 0;
+  }
+
+  .formdata{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .post-lists{

@@ -16,21 +16,33 @@ export const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <Link to='/' className='link'>Home</Link>
-      {!user ? (
-      <Link to='/login' className='link'>Login</Link>
-      ) : (
-      <Link to='/createpost' className='link'>Create Post</Link>)}
-
-      <div className='profile'>
-        {user && (
-          <>
-            <p>{user?.displayName}</p>
-            <img src={user?.photoURL || ""} width="40" height="40" />
-            <button className='logoutbutton' onClick={signuserout}>Log Out</button>
-          </>
-        )}
+      <div className="header">
+        <h1>FeedForge</h1>
       </div>
+
+      <div className="right-side-navbar">
+        
+
+        <div className='profile'>
+          {user && (
+            <>
+              <p>{user?.displayName}</p>
+              <img src={user?.photoURL || ""} width="40" height="40" />
+              <button className='logoutbutton' onClick={signuserout}>Log Out</button>
+            </>
+          )}
+        </div>
+
+        <div className="links">
+          <Link to='/' className='link'>Home</Link>
+          {!user ? (
+            <Link to='/login' className='link'>Login</Link>
+          ) : (
+            <Link to='/createpost' className='link'>Create Post</Link>)}
+        </div>
+      </div>
+
+
     </div>
   )
 }

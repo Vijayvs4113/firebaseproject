@@ -113,7 +113,7 @@ export const Post = (props: Props) => {
                     {hasuserliked ? <>&#128078;</> : <>&#128077;</>}
                 </button>
                 {likes && <p> Likes: {likes?.length} </p>}
-                <button className='deletebutton' onClick={deletePost}>Delete</button>
+                {user?.uid === post.userId? <button className='deletebutton' onClick={deletePost}>Delete</button> : <></>}
             </div>
         </div>
     );
